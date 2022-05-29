@@ -1,0 +1,165 @@
+<!-- Desenvolvido por: João Lima
+     _                   _     _
+    | | ___   __ _  ___ | |   (_)_ __ ___   __ _
+ _  | |/ _ \ / _` |/ _ \| |   | | '_ ` _ \ / _` |
+| |_| | (_) | (_| | (_) | |___| | | | | | | (_| |
+ \___/ \___/ \__,_|\___/|_____|_|_| |_| |_|\__,_|
+
+Github: https://github.com/JoaoVLima
+Linkedin: https://linkedin.com/in/celujoaolima
+-->
+{% load static %}
+{% load django_bootstrap5 %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<!-- Head
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<head>
+    <!-- Meta data
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="UTF-8">
+    <meta name="language" content="pt-br">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Concord{% endblock %}</title>
+    <meta name="author" content="Concord">
+    <meta name="subject" content="Chatroom">
+    <meta name="description" content="Chatroom">
+    <meta name="summary" content="Chatroom">
+    <meta name="copyright" content="Concord">
+    <meta name="topic" content="Chatroom">
+    <meta name="reply-to" content="devjoaolima@gmail.com">
+    <meta name="owner" content="Concord">
+    <!--
+    <meta name="url" content="http://www.concord.com.br/">
+    <meta name="identifier-URL" content="http://www.concord.com.br/">
+    -->
+    <meta name="coverage" content="Worldwide">
+    <meta name="distribution" content="Global">
+    <meta name="rating" content="General">
+    <meta name="application-name" content="Concord">
+
+    <!-- Open Graph / Facebook -->
+    <meta name="fb:page_id" content="123456" />
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://concord.com.br/">
+    <meta property="og:title" content="Chatroom">
+    <meta property="og:description" content="Chatroom">
+    <meta property="og:image" itemprop="image" content="http://concord.com.br/img/banner.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="http://concord.com.br/">
+    <meta property="twitter:title" content="Chatroom">
+    <meta property="twitter:description" content="Chatroom">
+    <meta property="twitter:image" content="http://www.concord.com.br/img/banner.png">
+
+    <meta name="og:image" itemprop="image" content="http://www.concord.com.br/img/logo.jpg">
+    <meta name="og:site_name" content="Concord"/>
+    <meta property="og:locale" content="pt_BR">
+    <meta property="article:author" content="Concord">
+
+    <meta name="og:email" content="devjoaolima@gmail.com"/>
+    <meta name="og:phone_number" content="+5541912345678"/>
+
+    <meta name="og:latitude" content=""/>
+    <meta name="og:longitude" content=""/>
+    <meta name="og:street-address" content=""/>
+    <meta name="og:locality" content="Curitiba"/>
+    <meta name="og:region" content="PR"/>
+    <meta name="og:postal-code" content=""/>
+    <meta name="og:country-name" content="BR"/>
+
+    <!-- Geo tags -->
+    <meta name="ICBM" content="">
+    <meta name="geo.position" content="">
+    <meta name="geo.region" content="BR-PR"><!-- Country code (ISO 3166-1): mandatory, state code (ISO 3166-2): optional; eg. content="US" / content="US-NY" -->
+    <meta name="geo.placename" content="Curitiba"><!-- eg. content="New York City" -->
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="blue">
+
+    <!-- Launch Screen Image -->
+    <link rel="apple-touch-startup-image" href="http://www.concord.com.br/img/logo_com_texto.png">
+
+    <!-- Launch Icon Title -->
+    <meta name="apple-mobile-web-app-title" content="Concord">
+
+    <!-- Enable standalone (full-screen) mode -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- Status bar appearance (has no effect unless standalone mode is enabled) -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="blue">
+
+    <meta itemprop="name" content="Concord">
+    <meta itemprop="image" content="http://www.concord.com.br/img/logo.jpg">
+
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Force IE 8/9/10 to use its latest rendering engine -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Select rendering engine order -->
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+
+    <!-- Locks the screen into the specified orientation -->
+    <meta name="x5-orientation" content="landscape/portrait">
+
+    <!-- Display this document in fullscreen -->
+    <meta name="x5-fullscreen" content="true">
+
+    <!-- Document will be displayed in "application mode" (fullscreen, etc.) -->
+    <meta name="x5-page-mode" content="fullscreen">
+
+    <!-- Locks the screen into the specified orientation -->
+    <meta name="screen-orientation" content="landscape/portrait">
+
+    <!-- Display this document in fullscreen -->
+    <meta name="full-screen" content="yes">
+
+    <!-- UC browser will display images even if in "text mode" -->
+    <meta name="imagemode" content="force">
+
+    <!-- Document will be displayed in "application mode"(fullscreen, forbidding gesture, etc.) -->
+    <meta name="browsermode" content="fullscreen">
+
+    <!-- <base href="http://www.concord.com.br/"> -->
+
+    <!-- Identify the software used to build the document (i.e. - WordPress, Dreamweaver) -->
+    <meta name="generator" content="Django">
+
+    <!-- Verify website ownership -->
+    <!-- <meta name="google-site-verification" content="verification_token">Google Search Console -->
+    <!-- <meta name="yandex-verification" content="verification_token">Yandex Webmasters -->
+    <!-- <meta name="msvalidate.01" content="verification_token">Bing Webmaster Center -->
+    <!-- <meta name="alexaVerifyID" content="verification_token">Alexa Console -->
+    <!-- <meta name="p:domain_verify" content="code_from_pinterest">Pinterest Console -->
+    <!-- <meta name="norton-safeweb-site-verification" content="norton_code">Norton Safe Web -->
+
+    <!-- FONT
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+
+    <!-- CSS
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    {% bootstrap_css %}
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+    <!-- Favicon
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+</head>
+<body>
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        {% block header %}{% endblock %}
+        {% block content %}{% endblock %}
+        {% block footer %}{% endblock %}
+    </div>
+    <!-- Scripts
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    {% bootstrap_javascript %}
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    {% block script %}
+    {% endblock %}
+</body>
+</html>
