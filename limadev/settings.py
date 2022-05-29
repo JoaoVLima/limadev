@@ -26,13 +26,16 @@ SECRET_KEY = django_key
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
 
 INSTALLED_APPS = [
     'django_bootstrap5',
+
+    'joao',
+    'brenda',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -136,7 +139,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # ASGI REALTIME APPLICATION
-ASGI_APPLICATION = 'concord.routing.application'
+ASGI_APPLICATION = 'limadev.routing.application'
 
 CHANNEL_LAYERS = {
     'default': {
